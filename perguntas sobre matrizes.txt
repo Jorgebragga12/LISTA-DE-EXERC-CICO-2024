@@ -1,0 +1,659 @@
+1.#include <iostream>
+
+int main() {
+    int matriz[4][4], count = 0;
+    std::cout << "Digite os elementos da matriz 4x4:\n";
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            std::cin >> matriz[i][j];
+            if (matriz[i][j] > 10) {
+                count++;
+            }
+        }
+    }
+
+    std::cout << "Quantidade de valores maiores que 10: " << count << std::endl;
+
+    return 0;
+}
+2.#include <iostream>
+
+int main() {
+    int matriz[5][5] = {0};
+    for (int i = 0; i < 5; ++i) {
+        matriz[i][i] = 1;
+    }
+    std::cout << "Matriz 5x5 com 1 na diagonal principal:\n";
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            std::cout << matriz[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+3.#include <iostream>
+
+int main() {
+    int matriz[5][5];
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            matriz[i][j] = i * j;
+        }
+    }
+    std::cout << "Matriz preenchida com o produto do valor da linha e da coluna:\n";
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            std::cout << matriz[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+4.#include <iostream>
+
+int main() {
+    int matriz[4][4], maxVal = INT_MIN, maxI, maxJ;
+    std::cout << "Digite os elementos da matriz 4x4:\n";
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            std::cin >> matriz[i][j];
+            if (matriz[i][j] > maxVal) {
+                maxVal = matriz[i][j];
+                maxI = i;
+                maxJ = j;
+            }
+        }
+    }
+    std::cout << "Matriz 4x4:\n";
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            std::cout << matriz[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    std::cout << "Maior valor: " << maxVal << " na posição (" << maxI << ", " << maxJ << ")\n";
+
+    return 0;
+}
+5.#include <iostream>
+
+int main() {
+    int matriz[5][5], x;
+    bool encontrado = false;
+    std::cout << "Digite os elementos da matriz 5x5:\n";
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            std::cin >> matriz[i][j];
+        }
+    }
+    std::cout << "Digite o valor a ser buscado: ";
+    std::cin >> x;
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            if (matriz[i][j] == x) {
+                std::cout << "Valor encontrado na posição (" << i << ", " << j << ")\n";
+                encontrado = true;
+                break;
+            }
+        }
+    }
+
+    if (!encontrado) {
+        std::cout << "Valor não encontrado.\n";
+    }
+
+    return 0;
+}
+6.#include <iostream>
+
+int main() {
+    int matrizA[4][4], matrizB[4][4], matrizC[4][4];
+    std::cout << "Digite os elementos da matriz A 4x4:\n";
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            std::cin >> matrizA[i][j];
+        }
+    }
+
+    std::cout << "Digite os elementos da matriz B 4x4:\n";
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            std::cin >> matrizB[i][j];
+        }
+    }
+
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            matrizC[i][j] = (matrizA[i][j] > matrizB[i][j]) ? matrizA[i][j] : matrizB[i][j];
+        }
+    }
+
+    std::cout << "Matriz C (maiores valores de A e B):\n";
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            std::cout << matrizC[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+7.#include <iostream>
+
+int main() {
+    int matriz[10][10];
+    for (int i = 0; i < 10; ++i) {
+        for (int j = 0; j < 10; ++j) {
+            if (i < j) {
+                matriz[i][j] = 2 * i + 7 * j * j;
+            } else if (i == j) {
+                matriz[i][j] = 3 * i * i + 1;
+            } else {
+                matriz[i][j] = 4 * i * i * i + 5 * j * j + 1;
+            }
+        }
+    }
+    std::cout << "Matriz 10x10:\n";
+    for (int i = 0; i < 10; ++i) {
+        for (int j = 0; j < 10; ++j) {
+            std::cout << matriz[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+8.#include <iostream>
+
+int main() {
+    int matriz[3][3], soma = 0;
+
+    std::cout << "Digite os elementos da matriz 3x3:\n";
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+9.#include <iostream>
+using namespace std;
+
+int main() {
+    int matriz[3][3];
+    int soma = 0;
+
+    cout << "Digite os elementos da matriz 3x3:" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cin >> matriz[i][j];
+        }
+    }
+
+    for(int i = 1; i < 3; i++) {
+        for(int j = 0; j < i; j++) {
+            soma += matriz[i][j];
+        }
+    }
+
+    cout << "A soma dos elementos abaixo da diagonal principal é: " << soma << endl;
+
+    return 0;
+}
+10.#include <iostream>
+using namespace std;
+
+int main() {
+    int matriz[3][3];
+    int soma = 0;
+
+    cout << "Digite os elementos da matriz 3x3:" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cin >> matriz[i][j];
+        }
+    }
+
+    for(int i = 0; i < 3; i++) {
+        soma += matriz[i][i];
+    }
+
+    cout << "A soma dos elementos na diagonal principal é: " << soma << endl;
+
+    return 0;
+}
+11.#include <iostream>
+using namespace std;
+
+int main() {
+    int matriz[3][3];
+    int soma = 0;
+
+    cout << "Digite os elementos da matriz 3x3:" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cin >> matriz[i][j];
+        }
+    }
+
+    for(int i = 0; i < 3; i++) {
+        soma += matriz[i][2 - i];
+    }
+
+    cout << "A soma dos elementos na diagonal secundária é: " << soma << endl;
+
+    return 0;
+}
+12.#include <iostream>
+using namespace std;
+
+int main() {
+    int matriz[3][3], transposta[3][3];
+
+    cout << "Digite os elementos da matriz 3x3:" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cin >> matriz[i][j];
+        }
+    }
+
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            transposta[j][i] = matriz[i][j];
+        }
+    }
+
+    cout << "A matriz transposta é:" << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cout << transposta[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+13.#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    srand(time(0));
+    int matriz[4][4];
+
+    cout << "Matriz original:" << endl;
+    for(int i = 0; i < 4; i++) {
+        for(int j = 0; j < 4; j++) {
+            matriz[i][j] = rand() % 20 + 1;
+            cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    for(int i = 0; i < 4; i++) {
+        for(int j = i + 1; j < 4; j++) {
+            matriz[i][j] = 0;
+        }
+    }
+
+    cout << "Matriz triangular inferior:" << endl;
+    for(int i = 0; i < 4; i++) {
+        for(int j = 0; j < 4; j++) {
+            cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+14.#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <ctime>
+using namespace std;
+
+int main() {
+    srand(time(0));
+    vector<int> numeros(100);
+    vector<vector<int>> cartela(5, vector<int>(5));
+
+    for(int i = 0; i < 100; i++) {
+        numeros[i] = i;
+    }
+
+    random_shuffle(numeros.begin(), numeros.end());
+
+    int k = 0;
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) {
+            cartela[i][j] = numeros[k++];
+        }
+    }
+
+    cout << "Cartela de bingo:" << endl;
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) {
+            cout << cartela[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+15.#include <iostream>
+using namespace std;
+
+int main() {
+    char matriz[5][10];
+    char gabarito[10];
+    int resultado[5] = {0};
+
+    cout << "Digite as respostas dos 5 alunos (10 questões cada):" << endl;
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 10; j++) {
+            cin >> matriz[i][j];
+        }
+    }
+
+    cout << "Digite o gabarito das 10 questões:" << endl;
+    for(int i = 0; i < 10; i++) {
+        cin >> gabarito[i];
+    }
+
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 10; j++) {
+            if(matriz[i][j] == gabarito[j]) {
+                resultado[i]++;
+            }
+        }
+    }
+
+    cout << "Pontuação dos alunos:" << endl;
+    for(int i = 0; i < 5; i++) {
+        cout << "Aluno " << i + 1 << ": " << resultado[i] << " pontos" << endl;
+    }
+
+    return 0;
+}
+16.#include <iostream>
+using namespace std;
+
+int main() {
+    char gabarito[10];
+    int matricula[3];
+    char respostas[3][10];
+    int notas[3] = {0};
+    int aprovados = 0;
+
+    cout << "Digite o gabarito das 10 questões:" << endl;
+    for(int i = 0; i < 10; i++) {
+        cin >> gabarito[i];
+    }
+
+    for(int i = 0; i < 3; i++) {
+        cout << "Digite a matrícula do aluno " << i + 1 << ":" << endl;
+        cin >> matricula[i];
+        cout << "Digite as respostas do aluno " << i + 1 << ":" << endl;
+        for(int j = 0; j < 10; j++) {
+            cin >> respostas[i][j];
+        }
+    }
+
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 10; j++) {
+            if(respostas[i][j] == gabarito[j]) {
+                notas[i]++;
+            }
+        }
+    }
+
+    cout << "Resultados dos alunos:" << endl;
+    for(int i = 0; i < 3; i++) {
+        cout << "Matrícula: " << matricula[i] << ", Nota: " << notas[i] << endl;
+        if(notas[i] >= 7) {
+            aprovados++;
+        }
+    }
+
+    double percentual_aprovacao = (double)aprovados / 3 * 100;
+    cout << "Percentual de aprovação: " << percentual_aprovacao << "%" << endl;
+
+    return 0;
+}
+17.#include <iostream>
+using namespace std;
+
+int main() {
+    int notas[10][3];
+    int piorNotaProva1 = 0, piorNotaProva2 = 0, piorNotaProva3 = 0;
+
+    for (int i = 0; i < 10; ++i)
+        for (int j = 0; j < 3; ++j)
+            cin >> notas[i][j];
+
+    for (int i = 0; i < 10; ++i) {
+        if (notas[i][0] <= notas[i][1] && notas[i][0] <= notas[i][2])
+            piorNotaProva1++;
+        else if (notas[i][1] <= notas[i][0] && notas[i][1] <= notas[i][2])
+            piorNotaProva2++;
+        else
+            piorNotaProva3++;
+    }
+
+    cout << piorNotaProva1 << " " << piorNotaProva2 << " " << piorNotaProva3 << endl;
+    return 0;
+}
+18.#include <iostream>
+using namespace std;
+
+int main() {
+    int matriz[3][3];
+    int somaColunas[3] = {0, 0, 0};
+
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 3; ++j)
+            cin >> matriz[i][j];
+
+    for (int j = 0; j < 3; ++j)
+        for (int i = 0; i < 3; ++i)
+            somaColunas[j] += matriz[i][j];
+
+    for (int j = 0; j < 3; ++j)
+        cout << somaColunas[j] << " ";
+    cout << endl;
+
+    return 0;
+}
+19.#include <iostream>
+using namespace std;
+
+int main() {
+    int alunos[5][4];
+    int matriculaMaiorNota;
+    int somaNotasFinais = 0;
+    int maiorNotaFinal = 0;
+
+    for (int i = 0; i < 5; ++i) {
+        cin >> alunos[i][0] >> alunos[i][1] >> alunos[i][2];
+        alunos[i][3] = alunos[i][1] + alunos[i][2];
+        somaNotasFinais += alunos[i][3];
+        if (alunos[i][3] > maiorNotaFinal) {
+            maiorNotaFinal = alunos[i][3];
+            matriculaMaiorNota = alunos[i][0];
+        }
+    }
+
+    cout << matriculaMaiorNota << endl;
+    cout << somaNotasFinais / 5.0 << endl;
+
+    return 0;
+}
+20.#include <iostream>
+using namespace std;
+
+int main() {
+    double matriz[3][6];
+    double somaImpares = 0;
+    double somaColuna2 = 0, somaColuna4 = 0;
+
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 6; ++j)
+            cin >> matriz[i][j];
+
+    for (int j = 0; j < 6; j += 2)
+        for (int i = 0; i < 3; ++i)
+            somaImpares += matriz[i][j];
+
+    for (int i = 0; i < 3; ++i) {
+        somaColuna2 += matriz[i][1];
+        somaColuna4 += matriz[i][3];
+    }
+
+    for (int i = 0; i < 3; ++i)
+        matriz[i][5] = matriz[i][0] + matriz[i][1];
+
+    cout << somaImpares << endl;
+    cout << (somaColuna2 + somaColuna4) / 6.0 << endl;
+
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 6; ++j)
+            cout << matriz[i][j] << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+21.#include <iostream>
+using namespace std;
+
+void somaMatrizes(double a[2][2], double b[2][2], double c[2][2]) {
+    for (int i = 0; i < 2; ++i)
+        for (int j = 0; j < 2; ++j)
+            c[i][j] = a[i][j] + b[i][j];
+}
+
+void subtraiMatrizes(double a[2][2], double b[2][2], double c[2][2]) {
+    for (int i = 0; i < 2; ++i)
+        for (int j = 0; j < 2; ++j)
+            c[i][j] = b[i][j] - a[i][j];
+}
+
+void adicionaConstante(double a[2][2], double b[2][2], double k) {
+    for (int i = 0; i < 2; ++i)
+        for (int j = 0; j < 2; ++j) {
+            a[i][j] += k;
+            b[i][j] += k;
+        }
+}
+
+void imprimeMatriz(double m[2][2]) {
+    for (int i = 0; i < 2; ++i) {
+        for (int j = 0; j < 2; ++j)
+            cout << m[i][j] << " ";
+        cout << endl;
+    }
+}
+
+int main() {
+    double a[2][2], b[2][2], c[2][2];
+    int opcao;
+    double k;
+
+    for (int i = 0; i < 2; ++i)
+        for (int j = 0; j < 2; ++j)
+            cin >> a[i][j];
+
+    for (int i = 0; i < 2; ++i)
+        for (int j = 0; j < 2; ++j)
+            cin >> b[i][j];
+
+    cin >> opcao;
+
+    switch (opcao) {
+    case 1:
+        somaMatrizes(a, b, c);
+        imprimeMatriz(c);
+        break;
+    case 2:
+        subtraiMatrizes(a, b, c);
+        imprimeMatriz(c);
+        break;
+    case 3:
+        cin >> k;
+        adicionaConstante(a, b, k);
+        imprimeMatriz(a);
+        imprimeMatriz(b);
+        break;
+    case 4:
+        imprimeMatriz(a);
+        imprimeMatriz(b);
+        break;
+    }
+
+    return 0;
+}
+22.#include <iostream>
+using namespace std;
+
+int main() {
+    double A[3][3], B[3][3], C[3][3] = {0};
+
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 3; ++j)
+            cin >> A[i][j];
+
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 3; ++j)
+            cin >> B[i][j];
+
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 3; ++j)
+            for (int k = 0; k < 3; ++k)
+                C[i][j] += A[i][k] * B[k][j];
+
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j)
+            cout << C[i][j] << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+23.#include <iostream>
+using namespace std;
+
+int main() {
+    double A[3][3], B[3][3] = {0};
+
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 3; ++j)
+            cin >> A[i][j];
+
+    for (int i = 0; i < 3; ++i)
+        for (int j = 0; j < 3; ++j)
+            for (int k = 0; k < 3; ++k)
+                B[i][j] += A[i][k] * A[k][j];
+
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j)
+            cout << B[i][j] << " ";
+        cout << endl;
+    }
+
+    return 0;
+}
+24.#include <iostream>
+using namespace std;
+
+int main() {
+    int tabuleiro[3][3];
+    bool jogadaFeita = false;
+
+    for (int i = 0; i < 3; ++i)
+        for (int j
+
+
+
+
+
+
